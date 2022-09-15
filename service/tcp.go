@@ -129,7 +129,7 @@ func NewTCPService(ciphers CipherList, replayCache *ReplayCache, m metrics.Shado
 		m:                 m,
 		readTimeout:       timeout,
 		replayCache:       replayCache,
-		targetIPValidator: onet.RequirePublicIP,
+		targetIPValidator: onet.RequireGlobalUnicastIP,
 	}
 }
 
